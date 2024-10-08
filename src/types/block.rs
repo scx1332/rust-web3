@@ -121,6 +121,8 @@ pub struct Block<TX> {
     pub mix_hash: Option<H256>,
     /// Nonce
     pub nonce: Option<H64>,
+
+    pub withdrawals: Option<serde_json::Value>
 }
 
 fn null_to_default<'de, D, T>(deserializer: D) -> Result<T, D::Error>
